@@ -13,7 +13,7 @@ try {
 // ─────────────────────────────────────────────
 // POST /api/payment/create-checkout-session
 // ─────────────────────────────────────────────
-router.post('/create-checkout-session', async (req, res) => {
+router.post('/create-checkout-session', express.json(), async (req, res) => {
   try {
     const { items, shippingAddress } = req.body;
 
